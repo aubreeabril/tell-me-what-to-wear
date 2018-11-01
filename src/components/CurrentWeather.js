@@ -32,9 +32,10 @@ class CurrentWeather extends Component {
             <React.Fragment>
               <i
                 style={{ width: "5em" }}
-                class={`wi wi-day-${this.state.weatherData.wx_desc.toLowerCase()}`}
+                class={`wi wi-day-${
+                  this.state.weatherData.wx_desc.toLowerCase().split(" ")[1]
+                }`}
               />
-
               <Temp
                 fahrenheit={this.state.weatherData.temp_f}
                 weatherData={this.state.weatherData}
