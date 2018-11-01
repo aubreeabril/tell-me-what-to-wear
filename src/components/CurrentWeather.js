@@ -3,7 +3,7 @@ import {
   OPEN_WEATHER_MAP_KEY,
   WEATHER_UNLOCKED_APP_ID,
   WEATHER_UNLOCKED_API_KEY
-} from "../keys";
+} from "../key";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Icon from "@material-ui/core/Icon";
@@ -30,12 +30,8 @@ class CurrentWeather extends Component {
           <h1 style={{ textAlign: "center" }}>Current Weather</h1>
           {this.state.weatherData ? (
             <React.Fragment>
-              <i
-                style={{ width: "5em" }}
-                class={`wi wi-day-${
-                  this.state.weatherData.wx_desc.toLowerCase().split(" ")[1]
-                }`}
-              />
+              <img src="../set/Overcast.gif" style={{ textAlign: "center" }} />
+
               <Temp
                 fahrenheit={this.state.weatherData.temp_f}
                 weatherData={this.state.weatherData}
