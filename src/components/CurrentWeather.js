@@ -8,11 +8,13 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Temp from "./Temp";
 import WhatToWear from "./WhatToWear";
+import loading from "./loading.svg";
 
 class CurrentWeather extends Component {
   state = {
     weatherData: null
   };
+
   componentDidMount() {
     fetch(
       `http://api.weatherunlocked.com/api/current/${this.props.lat},${
@@ -27,12 +29,25 @@ class CurrentWeather extends Component {
   }
 
   render() {
+    const style = {
+      position: "absolute",
+      display: "flex",
+      justifyContent: "center",
+      height: "100vh",
+      width: "100vw",
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      backgroundColor: "white"
+    };
+
     return (
       <React.Fragment>
-        <Card className="main-card">
-          <CardContent>
-            {this.state.weatherData ? (
-              <React.Fragment>
+        {this.state.weatherData ? (
+          <React.Fragment>
+            <Card className="main-card">
+              <CardContent>
                 <Temp
                   fahrenheit={this.state.weatherData.temp_f}
                   weatherData={this.state.weatherData}
@@ -46,12 +61,13 @@ class CurrentWeather extends Component {
                   {this.state.weatherData.feelslike_f}
                   °F
                 </div>
-              </React.Fragment>
-            ) : (
-              "Loading ..."
-            )}
-          </CardContent>
-        </Card>
+              </CardContent>
+            </Card>
+            <WhatToWear weatherData={this.state.weatherData} />
+          </React.Fragment>
+        ) : (
+          <img src={loading} alt="loading" style={style} />
+        )}
       </React.Fragment>
     );
   }

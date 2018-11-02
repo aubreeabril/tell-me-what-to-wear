@@ -4,7 +4,7 @@ import WeatherContainer from "./containers/WeatherContainer";
 class App extends Component {
   render() {
     return (
-      <div>
+      <div style={{ padding: "20px" }}>
         <WeatherContainer />
       </div>
     );
