@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import "onsenui/css/onsenui.css";
+import "onsenui/css/onsen-css-components.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { MuiThemeProvider } from "@material-ui/core/styles";
-
-import { createMuiTheme } from "@material-ui/core/styles";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

@@ -1,12 +1,17 @@
 import React, { Component } from "react";
+import { Page } from "react-onsenui";
 import WeatherContainer from "./containers/WeatherContainer";
 
 class App extends Component {
   render() {
     return (
-      <div style={{ padding: "20px" }}>
+      <Page
+        contentStyle={{
+          padding: 20
+        }}
+      >
         <WeatherContainer />
-      </div>
+      </Page>
     );
   }
 }

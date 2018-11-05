@@ -4,8 +4,7 @@ import {
   WEATHER_UNLOCKED_APP_ID,
   WEATHER_UNLOCKED_API_KEY
 } from "../key";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+import { Card } from "react-onsenui";
 import Temp from "./Temp";
 import WhatToWear from "./WhatToWear";
 import loading from "./loading.svg";
@@ -46,22 +45,20 @@ class CurrentWeather extends Component {
       <React.Fragment>
         {this.state.weatherData ? (
           <React.Fragment>
-            <Card className="main-card">
-              <CardContent>
-                <Temp
-                  fahrenheit={this.state.weatherData.temp_f}
-                  weatherData={this.state.weatherData}
-                />
-                <h3 className="centered">{this.state.weatherData.wx_desc}</h3>
-                <div className="centered">
-                  <i className="wi wi-strong-wind" />
-                  {this.state.weatherData.windspd_mph}
-                  mph | <i className="wi wi-humidity" />
-                  {this.state.weatherData.humid_pct}% | Feels like:{" "}
-                  {this.state.weatherData.feelslike_f}
-                  °F
-                </div>
-              </CardContent>
+            <Card>
+              <Temp
+                fahrenheit={this.state.weatherData.temp_f}
+                weatherData={this.state.weatherData}
+              />
+              <h3 className="centered">{this.state.weatherData.wx_desc}</h3>
+              <div className="centered">
+                <i className="wi wi-strong-wind" />
+                {this.state.weatherData.windspd_mph}
+                mph | <i className="wi wi-humidity" />
+                {this.state.weatherData.humid_pct}% | Feels like:{" "}
+                {this.state.weatherData.feelslike_f}
+                °F
+              </div>
             </Card>
             <WhatToWear weatherData={this.state.weatherData} />
           </React.Fragment>
