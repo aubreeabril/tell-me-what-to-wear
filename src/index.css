@@ -25,6 +25,22 @@ img {
   width: 50px;
 }
 
-.page {
-  background: linear-gradient(#e66465, #9198e5) !important;
+.toolbar {
+  height: 45px !important;
+  font-size: 2em !important;
+  background-color: #454655 !important;
+}
+
+.toolbar__title {
+  color: white !important;
+  font-size: 25px !important;
+}
+
+.gray-card {
+  background-color: #a7a8cd !important;
+}
+
+.ons-icon {
+  font-size: 25px !important;
+  color: white;
 }

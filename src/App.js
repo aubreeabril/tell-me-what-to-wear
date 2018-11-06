@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Page, Toolbar, ToolbarButton, Icon } from "react-onsenui";
+import { Page, Toolbar, Icon } from "react-onsenui";
 import WeatherContainer from "./containers/WeatherContainer";
 
 class App extends Component {
@@ -12,10 +12,7 @@ class App extends Component {
         renderToolbar={() => (
           <Toolbar>
             <div className="center">
-              <ToolbarButton>
-                <Icon icon="fa-running" />
-              </ToolbarButton>
-              Tell Me What To Wear
+              <Icon icon="fa-running" /> Tell Me What To Wear
             </div>
           </Toolbar>
         )}

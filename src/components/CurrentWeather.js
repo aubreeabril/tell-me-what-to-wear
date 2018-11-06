@@ -51,14 +51,18 @@ class CurrentWeather extends Component {
                 weatherData={this.state.weatherData}
               />
               <h3 className="centered">{this.state.weatherData.wx_desc}</h3>
-              <div className="centered">
-                <i className="wi wi-strong-wind" />
-                {this.state.weatherData.windspd_mph}
-                mph | <i className="wi wi-humidity" />
-                {this.state.weatherData.humid_pct}% | Feels like:{" "}
-                {this.state.weatherData.feelslike_f}
-                °F
-              </div>
+              <h3 className="centered">
+                Feels Like: {Math.round(this.state.weatherData.feelslike_f)}
+              </h3>
+
+              <Card className="gray-card">
+                <div className="centered footer">
+                  <i className="wi wi-strong-wind" />
+                  {this.state.weatherData.windspd_mph}
+                  mph | <i className="wi wi-humidity" />
+                  {this.state.weatherData.humid_pct}%
+                </div>
+              </Card>
             </Card>
             <WhatToWear weatherData={this.state.weatherData} />
           </React.Fragment>
