@@ -45,7 +45,7 @@ class CurrentWeather extends Component {
       <React.Fragment>
         {this.state.weatherData ? (
           <React.Fragment>
-            <Card>
+            <Card material>
               <Temp
                 fahrenheit={this.state.weatherData.temp_f}
                 weatherData={this.state.weatherData}

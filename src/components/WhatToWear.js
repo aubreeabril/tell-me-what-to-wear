@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { rainCodes } from "../constants/WeatherCodes";
-import Outfit from "./Outfit";
+import Gear from "./Gear";
 
 class WhatToWear extends Component {
-  // state = {
-  //   top: null,
-  //   bottom: null,
-  //   hat: null,
-  //   jacket: null,
-  //   shoes: null
-  // };
+  state = {
+    top: null,
+    bottom: null,
+    hat: null,
+    jacket: null,
+    shoes: null
+  };
 
   componentDidMount() {
     if (rainCodes.includes(this.props.weatherData.wx_code)) {
@@ -60,12 +60,7 @@ class WhatToWear extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <h1>What to wear</h1>
-        {this.state ? <Outfit items={this.state} /> : null}
-      </div>
-    );
+    return <div>{this.state ? <Gear items={this.state} /> : null}</div>;
   }
 }
 
