@@ -16,11 +16,71 @@ class Gear extends Component {
             this.props.items.jacket
           ]}
         >
-          <ListItem>{this.props.items.top}</ListItem>
-          <ListItem>{this.props.items.bottom}</ListItem>
-          <ListItem>{this.props.items.shoes}</ListItem>
+          <ListItem>
+            <div className="list-item__left">
+              {this.props.items.top === "Short Sleeves" ? (
+                <img
+                  src="https://static.thenounproject.com/png/1038958-200.png"
+                  alt="short sleeves"
+                  style={{ marginRight: "5px" }}
+                />
+              ) : null}
+              {this.props.items.top === "Singlet" ? (
+                <img
+                  src="https://static.thenounproject.com/png/1642418-200.png"
+                  alt="singlet"
+                  style={{ marginRight: "5px" }}
+                />
+              ) : null}
+              {this.props.items.top === "Long sleeves" ? (
+                <img
+                  src="https://static.thenounproject.com/png/1790087-200.png"
+                  alt="long sleeves"
+                  style={{ marginRight: "5px" }}
+                />
+              ) : null}
+              {this.props.items.top}
+            </div>
+          </ListItem>
+          <ListItem>
+            <div className="list-item__left">
+              {this.props.items.bottom === "Shorts" ? (
+                <img
+                  src="https://static.thenounproject.com/png/289508-200.png"
+                  alt="shorts"
+                  style={{ marginRight: "5px" }}
+                />
+              ) : null}
+              {this.props.items.bottom === "Leggings" ? (
+                <img
+                  src="https://static.thenounproject.com/png/205431-200.png"
+                  alt="leggings"
+                  style={{ marginRight: "5px" }}
+                />
+              ) : null}
+              {this.props.items.bottom}
+            </div>
+          </ListItem>
+          <ListItem>
+            <div className="list-item__left">
+              <img
+                src="https://static.thenounproject.com/png/1200375-200.png"
+                alt="shoes"
+                style={{ marginRight: "5px" }}
+              />
+              {this.props.items.shoes}
+            </div>
+          </ListItem>
           {this.props.items.hat ? (
-            <ListItem>{this.props.items.hat}</ListItem>
+            <ListItem>
+              <div className="list-item__left">
+                <img
+                  src="https://static.thenounproject.com/png/728635-200.png"
+                  alt="hat"
+                />
+                {this.props.items.hat}
+              </div>
+            </ListItem>
           ) : null}
           {this.props.items.jacket ? (
             <ListItem>{this.props.items.jacket}</ListItem>
