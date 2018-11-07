@@ -49,11 +49,19 @@ class WhatToWear extends Component {
           bottom: "Shorts",
           shoes: "Running shoes with moisture wicking socks"
         });
-      } else {
+      } else if (this.props.weatherData.temp_f > 35) {
         this.setState({
           top: "Long Sleeves",
           bottom: "Leggings",
           shoes: "Running shoes with moisture wicking socks"
+        });
+      } else {
+        this.setState({
+          top: "Long Sleeves",
+          bottom: "Leggings",
+          shoes: "Running shoes with moisture wicking socks.",
+          jacket: "Light Jacket to protect you from the wind",
+          gloves: "If you get too warm you can tuck them into your waistband!"
         });
       }
     }
