@@ -83,7 +83,15 @@ class Gear extends Component {
             </ListItem>
           ) : null}
           {this.props.items.jacket ? (
-            <ListItem>{this.props.items.jacket}</ListItem>
+            <ListItem>
+              <div className="list-item__left">
+                <img
+                  src="https://static.thenounproject.com/png/726299-200.png"
+                  alt="jacket"
+                />
+                {this.props.items.jacket}
+              </div>
+            </ListItem>
           ) : null}
         </List>
       </div>

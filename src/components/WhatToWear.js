@@ -39,7 +39,8 @@ class WhatToWear extends Component {
           top: "Long Sleeves",
           hat: "Hat with visor to keep blowing rain or snow off your face.",
           bottom: "Leggings",
-          shoes: "Running shoes with moisture wicking socks",
+          shoes:
+            "Running shoes with moisture wicking socks. It's freezing. Try two pairs of socks, one made of a good wicking material and also a warm one.",
           jacket: `It's cold and raining, wear a breathable jacket. Windbreakers are great`
         });
       }
