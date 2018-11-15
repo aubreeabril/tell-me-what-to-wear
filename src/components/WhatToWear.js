@@ -27,12 +27,20 @@ class WhatToWear extends Component {
           bottom: "Leggings",
           shoes: "Running shoes with moisture wicking socks"
         });
-      } else {
+      } else if (this.props.weatherData.temp_f > 38) {
         this.setState({
           top: "Long Sleeves",
           hat: "Hat with visor to keep blowing rain or snow off your face.",
           bottom: "Leggings",
           shoes: "Running shoes with moisture wicking socks"
+        });
+      } else {
+        this.setState({
+          top: "Long Sleeves",
+          hat: "Hat with visor to keep blowing rain or snow off your face.",
+          bottom: "Leggings",
+          shoes: "Running shoes with moisture wicking socks",
+          jacket: `It's cold and raining, wear a breathable jacket. Windbreakers are great`
         });
       }
     }
