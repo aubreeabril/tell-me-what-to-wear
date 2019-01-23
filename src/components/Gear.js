@@ -32,7 +32,7 @@ class Gear extends Component {
                   style={{ marginRight: "5px" }}
                 />
               ) : null}
-              {this.props.items.top === "Long sleeves" ? (
+              {this.props.items.top === "Long Sleeves" ? (
                 <img
                   src="https://static.thenounproject.com/png/1790087-200.png"
                   alt="long sleeves"
